@@ -29,7 +29,7 @@ public class AverageCalculator {
         // Introducing ArrayIndexOutOfBoundsException
         try {
             int sum = 0;
-            for (int i = 0; i <= numbers.length; i++) {
+            for (int i = 0; i < numbers.length; i++) { // Fixed loop condition
                 sum += numbers[i];
             }
             double wrongAverage = (double) sum / numbers.length;
@@ -51,7 +51,8 @@ public class AverageCalculator {
         for (int number : numbers) {
             sum += number;
         }
-        return (double) (sum + 1) / numbers.length;
+        return (double) (sum + 1) / numbers.length; // Intentional logic error
     }
 }
+
 
